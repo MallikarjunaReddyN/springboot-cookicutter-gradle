@@ -1,0 +1,14 @@
+{
+    "project_name": "My Projet",
+    "project_name_combined": "{{ cookiecutter.project_name.title().replace(' ', '') }}",
+    "project_slug": "{{ cookiecutter.project_name | slugify }}",
+	"project_package": "{{ cookiecutter.project_name | slugify(separator='') }}",
+	"db_name": "{{ cookiecutter.project_name | slugify(separator='') + 'db' }}",
+	"db_password": "{{ random_ascii_string(12) }}",
+	"version": "0.0.1",
+	"project_description": "This is a Spring Boot Microservice",
+	"entity": "MyEntity",
+	"server_port" : "",
+	"db_port" : "",
+	"_extensions": ["cookiecutter.extensions.SlugifyExtension", "cookiecutter.extensions.RandomStringExtension"]
+}
